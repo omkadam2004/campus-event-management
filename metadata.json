@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Remix: CampusEvent Pro1",
+  "description": "A comprehensive college event management system with role-based access, QR code passes, and real-time report generation for organizers.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": []
+}
