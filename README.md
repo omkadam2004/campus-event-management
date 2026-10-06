@@ -1,165 +1,149 @@
 # 🎓 Campus Event Management System
 
-A modern web-based **Campus Event Management System** designed to simplify the process of creating, managing, discovering, and registering for college campus events.
+A modern web-based **Campus Event Management System** designed to simplify the process of creating, managing, registering, and monitoring college campus events.
 
-The system provides separate functionality for **students/users and administrators**, making campus event management more organized, efficient, and accessible.
+The system provides separate functionalities for **Students/Users and Administrators**, along with event registration, notifications, feedback, pass verification, report generation, and AI-powered assistance.
 
 ---
 
 ## 📌 Project Overview
 
-Managing college events manually can be time-consuming and difficult to organize.
+Managing college events manually can be time-consuming and difficult. Students may have difficulty finding event information, registering for events, and tracking their registrations.
 
-The **Campus Event Management System** provides a centralized digital platform where students can explore upcoming events, register for events, manage their registrations, and receive important event-related information.
+The **Campus Event Management System** provides a centralized platform where students can browse events, view event details, register online, manage registrations, receive notifications, submit feedback, and verify event passes.
 
-Administrators can manage events, registrations, users, notifications, and other event-related activities through the system.
+Administrators can manage events, registrations, notifications, feedback, and generate reports through the admin panel.
 
 ---
 
 ## ✨ Key Features
 
-### 👨‍🎓 User Features
+### 👨‍🎓 Student/User Features
 
-- 🔐 User Registration & Login
-- 🏠 User Dashboard
-- 🎉 Browse Campus Events
-- 📅 View Event Details
-- 📝 Register for Events
+- 🔐 User Registration and Login
+- 🏠 Interactive Home Page
+- 📅 Browse Upcoming Events
+- 🔎 View Event Details
+- 📝 Online Event Registration
+- 🎫 Event Pass Verification
 - 📋 View My Registrations
-- 🔍 Event Search & Discovery
-- 🔔 Event Notifications
-- 📱 Responsive User Interface
-- 🤖 AI-powered assistance
+- 🔔 Notifications
+- ⭐ Submit Event Feedback
+- 🤖 AI-powered Chatbot Assistance
+- 📊 User Dashboard
 
 ### 👨‍💼 Admin Features
 
-- 🔐 Secure Admin Login
+- 🔐 Admin Login
 - 📊 Admin Dashboard
-- ➕ Create & Manage Events
-- ✏️ Update Event Information
-- 🗑️ Delete Events
+- ➕ Create New Events
+- ✏️ Manage Events
 - 👥 Manage Event Registrations
 - 📢 Manage Notifications
-- 📈 View Event-related Reports
-- 👤 Manage Users
+- ⭐ View User Feedback
+- 📈 Generate Event Reports
+- 🎫 Verify Event Passes
 
 ---
 
-## 🛠️ Technologies Used
+## 🛠️ Technology Stack
 
-| Technology | Purpose |
-|------------|---------|
-| React | Frontend UI Development |
-| TypeScript | Type-safe Application Development |
-| Vite | Frontend Build Tool |
-| Node.js | Backend Runtime |
-| Express.js | Backend/API Development |
-| HTML5 | Web Structure |
-| CSS3 | Styling & Responsive Design |
-| JavaScript | Application Logic |
-| Gemini API | AI-powered Features |
-| Git & GitHub | Version Control |
+### Frontend
+- React.js
+- TypeScript
+- Vite
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Node.js
+- Express.js
+- REST API
+
+### Database
+- MongoDB
+- MongoDB Atlas
+
+### AI Integration
+- Google Gemini API
+
+### Development Tools
+- Visual Studio Code
+- Git
+- GitHub
+- npm
 
 ---
 
 ## 🏗️ System Architecture
 
 ```text
-┌─────────────────────────────────────┐
-│             User / Admin            │
-└──────────────────┬──────────────────┘
-                   │
-                   ▼
-┌─────────────────────────────────────┐
-│          React + TypeScript         │
-│             Frontend                │
-└──────────────────┬──────────────────┘
-                   │
-                   ▼
-┌─────────────────────────────────────┐
-│          API / Backend Layer        │
-│            Node.js + Server         │
-└──────────────────┬──────────────────┘
-                   │
-                   ▼
-┌─────────────────────────────────────┐
-│       Event / User / Registration   │
-│             Services                │
-└──────────────────┬──────────────────┘
-                   │
-                   ▼
-┌─────────────────────────────────────┐
-│        Application Data / APIs      │
-└─────────────────────────────────────┘
-User Workflow
-                ┌───────────────┐
-                │     Start     │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │   Register /  │
-                │     Login     │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │    Dashboard  │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │ Browse Events │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │ Event Details │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │    Register   │
-                │   for Event   │
-                └───────┬───────┘
-                        │
-                        ▼
-                ┌───────────────┐
-                │ Registration  │
-                │   Confirmed   │
-                └───────────────┘
+User / Admin
+     │
+     ▼
+React + TypeScript
+     │
+     ▼
+REST API
+     │
+     ▼
+Node.js + Express.js
+     │
+     ▼
+MongoDB / MongoDB Atlas
+
+Student Workflow
+User Registration
+       ↓
+     Login
+       ↓
+     Home
+       ↓
+ Browse Events
+       ↓
+ Event Details
+       ↓
+ Register for Event
+       ↓
+ Registration Confirmation
+       ↓
+ My Registrations
+       ↓
+ Attend Event
+       ↓
+ Submit Feedback
+
 Admin Workflow
-                 ┌──────────────┐
-                 │  Admin Login │
-                 └───────┬──────┘
-                         │
-                         ▼
-                 ┌──────────────┐
-                 │   Dashboard  │
-                 └───────┬──────┘
-                         │
-            ┌────────────┼────────────┐
-            │            │            │
-            ▼            ▼            ▼
-       ┌─────────┐ ┌───────────┐ ┌────────────┐
-       │ Manage  │ │  Manage   │ │  Manage    │
-       │ Events  │ │  Users    │ │Registrations│
-       └─────────┘ └───────────┘ └────────────┘
-            │            │            │
-            └────────────┼────────────┘
-                         │
-                         ▼
-                 ┌──────────────┐
-                 │  Reports &   │
-                 │ Notifications│
-                 └──────────────┘
-Project Structure
+Admin Login
+     ↓
+Admin Dashboard
+     ↓
+Create / Manage Events
+     ↓
+Manage Registrations
+     ↓
+Manage Notifications
+     ↓
+View Feedback
+     ↓
+Generate Reports
+     ↓
+Verify Event Passes
+
+📂 Project Structure
 campus-event-management/
 │
 ├── server/
 │   ├── routes/
-│   ├── utils/
-│   └── ...
+│   │   ├── auth.ts
+│   │   ├── events.ts
+│   │   ├── feedback.ts
+│   │   ├── notifications.ts
+│   │   └── registrations.ts
+│   │
+│   └── utils/
+│       └── mailer.ts
 │
 ├── src/
 │   ├── components/
@@ -192,7 +176,6 @@ campus-event-management/
 │   └── main.tsx
 │
 ├── uploads/
-│
 ├── .env.example
 ├── .gitignore
 ├── index.html
@@ -202,30 +185,62 @@ campus-event-management/
 ├── server.ts
 ├── tsconfig.json
 ├── vite.config.ts
+├── viva.md
 └── README.md
-🎯 Project Objectives
+🗄️ Database
 
-The main objectives of this project are:
+The project uses MongoDB as the primary database.
 
-To digitize the campus event management process.
-To provide a centralized platform for college events.
-To make event registration easier for students.
-To reduce manual event management work.
-To provide administrators with better event management tools.
-To improve communication through notifications.
-To provide AI-powered assistance to users.
-Future Enhancements
+MongoDB is used to store and manage:
 
-The system can be further enhanced with:
+User information
+Admin information
+Event details
+Event registrations
+Notifications
+Feedback
+Event pass/registration information
 
-📱 Mobile Application
-📧 Email Notifications
-📲 SMS Notifications
-🎫 QR Code-based Event Attendance
-💳 Online Payment Integration
-📊 Advanced Analytics Dashboard
-⭐ Event Ratings & Reviews
-📅 Calendar Integration
-☁️ Cloud Deployment
-🔔 Real-time Notifications
-🔐 Advanced Security & Role Management
+The application can be connected to MongoDB Atlas for cloud-based database management.
+📦 Main Modules
+1. Authentication Module
+User Registration
+User Login
+Admin Authentication
+Authentication State Management
+2. Event Management Module
+Create Events
+Update Events
+Manage Events
+View Event Details
+3. Event Registration Module
+Online Event Registration
+Registration Management
+My Registrations
+4. Notification Module
+Event Announcements
+Registration Updates
+Important Notifications
+5. Feedback Module
+Submit Event Feedback
+View Feedback
+6. Pass Verification Module
+Event Pass Verification
+Registration Verification
+7. Report Generation Module
+Generate Event Reports
+View Registration Data
+8. AI Chatbot Module
+AI-powered assistance
+Event-related queries
+Interactive user support
+⚙️ Installation & Setup
+Prerequisites
+
+Make sure the following are installed:
+
+Node.js
+npm
+Git
+MongoDB / MongoDB Atlas
+Visual Studio Code
